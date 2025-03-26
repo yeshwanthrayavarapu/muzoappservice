@@ -4,6 +4,8 @@ import * as sql from 'mssql';
 import { getServerSession } from 'next-auth';
 import { authOptions } from '@/app/lib/auth/authOptions';
 
+export const dynamic = 'force-dynamic';
+
 export async function GET() {
   try {
     const session = await getServerSession(authOptions);
